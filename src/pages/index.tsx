@@ -3,7 +3,7 @@ import Loading from "@src/components/loading";
 import { auth, provider } from "@src/utils/firebase";
 import { signInWithRedirect } from "firebase/auth";
 import { useAtom } from "jotai";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -151,9 +151,31 @@ export default function Home() {
   return (
     <>
       {loading && <Loading />}
-      <Head>
-        <title>To-do - Login</title>
-      </Head>
+      <NextSeo
+        title="Kenny Tran - Todo"
+        description="A to-do application with firebase integration and CRUD capabilities"
+        canonical="https://todo.ktra99.dev/"
+        openGraph={{
+          title: "Kenny Tran - Todo",
+          description:
+            "A to-do application with firebase integration and CRUD capabilities",
+          images: [
+            {
+              url: "https://todo.ktra99.dev/og.png",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "todo.ktra99.dev",
+        }}
+        twitter={{
+          handle: "@ktra99",
+          site: "@todo.ktra99.dev",
+          cardType: "summary_large_image",
+        }}
+      />
       <div className="relative isolate bg-white">
         <Pattern />
         <Navbar />

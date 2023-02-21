@@ -1,13 +1,35 @@
 import { ArrowLongLeftIcon } from "@heroicons/react/20/solid";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 
 export default function Policy() {
   return (
     <>
-      <Head>
-        <title>To-do - Privacy policy</title>
-      </Head>
+      <NextSeo
+        title="Kenny Tran - Todo"
+        description="A to-do application with firebase integration and CRUD capabilities"
+        canonical="https://todo.ktra99.dev/"
+        openGraph={{
+          title: "Kenny Tran - Todo",
+          description:
+            "A to-do application with firebase integration and CRUD capabilities",
+          images: [
+            {
+              url: "https://todo.ktra99.dev/og.png",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "todo.ktra99.dev",
+        }}
+        twitter={{
+          handle: "@ktra99",
+          site: "@todo.ktra99.dev",
+          cardType: "summary_large_image",
+        }}
+      />
       <div className="mx-auto max-w-7xl space-y-8 px-4 py-12 text-xl">
         <Link
           href="/"

@@ -15,6 +15,7 @@ import { fetchTaskAtom, loadingAtom, taskAtom, userAtom } from "@src/atoms";
 import Loading from "@src/components/loading";
 import { auth, db } from "@src/utils/firebase";
 import clsx from "clsx";
+import { formatDistance } from "date-fns";
 import { signOut } from "firebase/auth";
 import {
   addDoc,
@@ -26,10 +27,9 @@ import {
 } from "firebase/firestore";
 import { AnimatePresence, motion } from "framer-motion";
 import { useAtom } from "jotai";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { FormEvent, Fragment, useEffect, useMemo, useState } from "react";
-import { format, formatDistance } from "date-fns";
 
 function Navbar() {
   return (
@@ -172,12 +172,6 @@ function Account() {
                             name="deadline"
                             id="deadline"
                             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-800 focus:ring-gray-800 sm:text-sm"
-                            defaultValue={format(
-                              new Date(
-                                currentTime(new Date()) + 60 * 60 * 1000
-                              ),
-                              "yyyy-MM-dd hh:mm"
-                            )}
                             required
                           />
                         </div>
@@ -699,9 +693,31 @@ export default function Dashboard() {
   }, [user, push, fetchTasks]);
   return (
     <>
-      <Head>
-        <title>To-do - Dashboard</title>
-      </Head>
+      <NextSeo
+        title="Kenny Tran - Todo"
+        description="A to-do application with firebase integration and CRUD capabilities"
+        canonical="https://todo.ktra99.dev/"
+        openGraph={{
+          title: "Kenny Tran - Todo",
+          description:
+            "A to-do application with firebase integration and CRUD capabilities",
+          images: [
+            {
+              url: "https://todo.ktra99.dev/og.png",
+              width: 800,
+              height: 600,
+              alt: "Og Image Alt",
+              type: "image/jpeg",
+            },
+          ],
+          siteName: "todo.ktra99.dev",
+        }}
+        twitter={{
+          handle: "@ktra99",
+          site: "@todo.ktra99.dev",
+          cardType: "summary_large_image",
+        }}
+      />
       {loading && <Loading />}
       <Navbar />
       <div className="relative mb-10 flex min-h-full flex-col">
