@@ -6,7 +6,7 @@ specifiers:
   '@next/font': 13.2.1
   '@tailwindcss/forms': ^0.5.3
   '@types/gtag.js': ^0.0.12
-  '@types/node': 18.14.1
+  '@types/node': 18.14.2
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   autoprefixer: ^10.4.13
@@ -32,7 +32,7 @@ dependencies:
   '@heroicons/react': 2.0.14_react@18.2.0
   '@next/font': 13.2.1
   '@types/gtag.js': 0.0.12
-  '@types/node': 18.14.1
+  '@types/node': 18.14.2
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   clsx: 1.2.1
@@ -554,7 +554,7 @@ packages:
     engines: {node: ^8.13.0 || >=10.10.0}
     dependencies:
       '@grpc/proto-loader': 0.7.4
-      '@types/node': 18.14.1
+      '@types/node': 18.14.2
     dev: false
 
   /@grpc/proto-loader/0.6.13:
@@ -903,8 +903,8 @@ packages:
     resolution: {integrity: sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA==}
     dev: false
 
-  /@types/node/18.14.1:
-    resolution: {integrity: sha512-QH+37Qds3E0eDlReeboBxfHbX9omAcBCXEzswCu6jySP642jiM3cYSIkU/REqwhCUqXdonHFuBfJDiAJxMNhaQ==}
+  /@types/node/18.14.2:
+    resolution: {integrity: sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==}
     dev: false
 
   /@types/prop-types/15.7.5:
@@ -2873,7 +2873,7 @@ packages:
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
       '@types/long': 4.0.2
-      '@types/node': 18.14.1
+      '@types/node': 18.14.2
       long: 4.0.0
     dev: false
 
@@ -2892,7 +2892,7 @@ packages:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 18.14.1
+      '@types/node': 18.14.2
       long: 5.2.1
     dev: false
 
